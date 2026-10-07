@@ -1,60 +1,104 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Image float</title>
-		<style>
-			body {
-			    font-family: Arial, Helvetica, sans-serif;
-				font-size: 85%;
-				width: 650px;
-			    margin: 0 auto;
-				padding: 1em;
-			}
-			h2 {
-				color: #004e97;
-				margin-bottom: .5em;
-			}
-			img {
-				float: left;
-				margin-top: 10px;
-				margin-bottom: 10px;
-			}
-			p {
-				line-height: 1.3;
-				margin: 0;
-			}
-			ul {
-				line-height: 1.3;
-				padding-left: 1em;
-				margin-top: .6em;
-				margin-left: 210px;
-			}
-			li {
-				margin-top: .3em;
-				margin-left: .5em;
-			}
-			#last { clear: left; }
-		</style>
-	</head>
+<head>
+    <meta charset="utf-8">
+    <title>Employee table</title>
+	<style>
+		body {
+			width: 750px;
+			margin: 0 auto;
+		}
+		table {
+			border-collapse: collapse;
+			border: 1px solid black;
+			margin: 20px;
+		}
+		caption {
+			font-size: 150%;
+			font-weight: bold;
+			padding-bottom: .5em;
+		}
+		thead, tfoot {
+			background-color: yellow;
+		}
+		tfoot {
+			font-weight: bold;
+		}
+		th, td {
+			border: 1px solid black;
+			padding: .2em 1em .2em .5em;
+			text-align: left;
+			vertical-align: middle;
+		}
+		.right {
+			text-align: right;
+		}
+		.top {
+			vertical-align: top;
+		}
+		tbody tr:nth-child(even) td {
+			background-color: yellow;
+		}
+	</style>
+</head>
 
-	<body>
-		<h2>Teach your students using the books the professionals use</h2>
-		<p>Although our books are written for professional programmers who need to master 
-		new job skills, there have always been instructors teaching job-oriented curricula
-		who&rsquo;ve adopted our books. For example, our books are used:</p>
-		<img src="images/students.jpg" alt="teacher and students" width="192" height="128" 
-		     longdesc="A teacher looking over the work of four students">
-		<ul>
-			<li>in college and university MIS programs that focus on providing students with
-			practical, real-world experience</li>
-			<li>by technical institutes and community colleges that focus on the skills that
-			employers are looking for</li>
-			<li>in Continuing Ed and Extension programs where the students are
-			professionals who are expanding their skills</li>
-		</ul>
-		<p id="last">So if your program fits one of those profiles, please take a look at our books.
-		I&rsquo;m confident you&rsquo;ll discover a new level of structure, clarity, and relevance 
-		that will benefit both you and your students.</p>
-	</body>
+<body>
+<table>
+	<caption>Employee Table</caption>
+	<thead>
+		<tr>
+			<th>Department</th>
+			<th>Name</th>
+			<th>E-mail</th>
+			<th class="right">Years of Service</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="top" rowspan="3">Editorial</th>
+			<td>Joel Murach</td>
+			<td>joelmurach@yahoo.com</td>
+			<td class="right">22</td>
+		</tr>
+		<tr>
+			<td>Anne Boehm</td>
+			<td>anne@murach.com</td>
+			<td class="right">34</td>
+		</tr>
+		<tr>
+			<td>Zak Ruvalcaba</td>
+			<td>zak@modulemedia.com</td>
+			<td class="right">4</td>
+		</tr>
+		<tr>
+			<th class="top" rowspan="2">Marketing</th>
+			<td>Judy Taylor</td>
+			<td>judy@murach.com</td>
+			<td class="right">39</td>
+		</tr>
+		<tr>
+			<td>Cyndi Vasquez</td>
+			<td>cyndi@murach.com</td>
+			<td class="right">10</td>
+		</tr>
+		<tr>
+			<th class="top" rowspan="2">Customer Service</th>
+			<td>Kelly Slivkoff</td>
+			<td>kelly@murach.com</td>
+			<td class="right">25</td>
+		</tr>
+		<tr>
+			<td>Juliette Baylon</td>
+			<td>juliette@murach.com</td>
+			<td class="right">1</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th class="right" colspan="3">Total Years of Service</th>
+			<td class="right">105</td>
+		</tr>
+	</tfoot>
+</table>
+</body>
 </html>
